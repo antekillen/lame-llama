@@ -8,7 +8,7 @@ class test_rhyme_thyme(unittest.TestCase):
         self.assertEqual(RhymeThyme.rhyme_thyme(self,'abcd'), 'Thyme\n', 'Not returning rhyming word')
 
     def test_goodbye(self):
-        text = 'Goodbye!\n'
+        text = 'Goodbye!\n' 
         self.assertEqual(RhymeThyme.print_goodbye_text(self), text, 'Not printing goodbye text properly!')
     
     def test_welcome(self):

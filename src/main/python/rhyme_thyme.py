@@ -3,15 +3,16 @@ import nltk
 
 class RhymeThyme(object):
 
-    def rhyme_thyme(self, word):
+    def rhyme_thyme(self, word): 
         entries = nltk.corpus.cmudict.entries()
         syllables = [(inp, syl) for inp, syl in entries if inp == word]
         level = 2
         rhymes = []
         for (inp, syllable) in syllables:
             rhymes += [inp for inp, pron in entries if pron[-level:] == syllable[-level:]]
-        #answers = list(set(rhymes))[0:5] #Five answers
-        #output = []
+        # TODO: Remove the below comments...
+		#answers = list(set(rhymes))[0:5] #Five answers
+        #output = [] 
         #for i in range(len(answers)):
             #output.append(str(answers[i]))
         if len(list(set(rhymes))) > 1:
